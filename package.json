@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "An Express.js app implementing a JSON web token.",
   "main": "app.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "clear && nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",
