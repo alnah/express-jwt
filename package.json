@@ -1,0 +1,15 @@
+{
+  "name": "express-jwt",
+  "version": "1.0.0",
+  "description": "An Express.js app implementing a JSON web token.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "express-jwt"
+  },
+  "author": "alnah <alexis.nahan@gmail.com>",
+  "license": "MIT"
+}
