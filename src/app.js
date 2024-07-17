@@ -1,4 +1,6 @@
 require("dotenv").config();
+require("express-async-error");
+
 const express = require("express");
 
 const routeNotFoundMiddleware = require("./middlewares/route-not-found");
