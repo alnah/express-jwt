@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+
+# dotenv environment variables
+.env
+
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Express specific
+public/uploads/
+
+# Express-async-errors
+error.log
+
+# HTTP status codes
+http-status-codes.log
+
+# Mongoose specific
+*.seed
+
+# Nodemon specific
+pids/
