@@ -12,8 +12,8 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.use("/api/v1", routesMain);
+app.use("/api/v1/", routesMain);
 app.use(routeNotFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
-app.listen(3000, () => console.log(`Server is listening on port ${port}`));
+app.listen(port, () => console.log(`Server is listening on port ${port}`));

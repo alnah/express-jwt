@@ -1,4 +1,4 @@
-const router = require("express").Router;
+const router = require("express").Router();
 const { login, dashboard } = require("../controllers/main");
 
 router.route("/dashboard").get(dashboard);

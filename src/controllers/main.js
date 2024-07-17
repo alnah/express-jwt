@@ -8,4 +8,4 @@ const dashboard = async (_, res) => {
   });
 };
 
-exports.module = { login, dashboard };
+module.exports = { login, dashboard };
