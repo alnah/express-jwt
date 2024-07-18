@@ -1,4 +1,4 @@
-const { CustomApiError } = require("../errors/custom-error");
+const { CustomApiError } = require("../errors");
 
 // next is used by express-async-errors
 // eslint-disable-next-line no-unused-vars

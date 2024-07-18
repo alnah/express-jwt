@@ -2,14 +2,14 @@ require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const { v4: uuid } = require("uuid");
 
-const { CustomApiError } = require("../errors/custom-error");
+const { BadRequest } = require("../errors");
 
 const jwtSecret = process.env.JWT_SECRET;
 
 const login = async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password)
-    throw new CustomApiError("Please provide a username or a password", 400);
+    throw new BadRequest("Please provide a username or a password");
   // use for demonstration, normally provided by the database
   const id = uuid();
   // try to keep the payload small, better experience for user
