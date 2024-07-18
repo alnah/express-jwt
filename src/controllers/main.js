@@ -17,7 +17,13 @@ const login = async (req, res) => {
   res.send({ message: "user created", token });
 };
 
-const dashboard = async (_, res) => {
+const dashboard = async (req, res) => {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    throw new CustomApiError("Invalid credentials: provide a valid token", 401);
+  }
+  const token = authHeader.split(" ")[1];
+  console.log(token);
   const luckyNumber = Math.floor(Math.random() * 100);
   res.status(200).json({
     message: "Hello, Jane Doe",
