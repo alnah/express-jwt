@@ -1,5 +1,7 @@
+const { StatusCodes } = require("http-status-codes");
+
 const routeNotFoundMiddleware = (_, res) => {
-  res.status(404).json({ message: "Route not found" });
+  res.status(StatusCodes.NOT_FOUND).json({ message: "Route not found" });
 };
 
 module.exports = routeNotFoundMiddleware;

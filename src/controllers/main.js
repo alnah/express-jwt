@@ -1,6 +1,7 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const { v4: uuid } = require("uuid");
+const { StatusCodes } = require("http-status-codes");
 
 const { BadRequest } = require("../errors");
 
@@ -20,7 +21,7 @@ const login = async (req, res) => {
 const dashboard = async (req, res) => {
   const { username } = req.user;
   const luckyNumber = Math.floor(Math.random() * 100);
-  res.status(200).json({
+  res.status(StatusCodes.OK).json({
     message: `Hello, ${username.charAt(0).toUpperCase()}${username.slice(1)}`,
     secret: `Here is your authorized data, your lucky number is ${luckyNumber}`,
   });
